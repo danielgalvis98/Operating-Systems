@@ -1,4 +1,4 @@
-# Ejercicios de la clase 3 de sistemas operativos
+# Ejercicios de la clase 4 de sistemas operativos
 
 ### 1.Mostrar una tabla de procesos que incluya únicamente los nombres de los procesos, sus IDs, y si están respondiendo a Windows (la propiedad Responding muestra eso). Haga que la tabla tome el mínimo de espacio horizontal, pero no permita que la información se trunque.
 
@@ -50,3 +50,51 @@ En donde primero se está filtrando para que muestre únicamente los directorios
 ls C:\Windows | where -filter { $_.Name -like '*.exe'} | fl Name,VersionInfo,@{n='Tamaño';e={$_.Length}}
 ```
 Primero se hace el filtrado, para que solo muestre los archivos .exe, y después se aplica el formato.
+
+### 7. Importe el módulo NetAdapter (empleando el comando Import-Module NetAdapter). Empleando el cmdlet Get-NetAdapter, muestre una lista de adaptadores no virtuales (adaptadores cuya propiedad Virtual sea falsa. El valor lógico falso es representado por Powershell como $False).
+
+Se usa el comando
+```powershell
+Get-NetAdapter | where -Filter { $_.Virtual -eq $false} | fl
+```
+Donde se hace el filtrado con el ```powershell where -Filter```y después se aplica el formato de lista.
+
+### 8. Importe el módulo DnsClient. Empleando el cmdlet Get-DnsClientCache, muestre una lista de los registros A y AAAA que estén en el caché. Sugerencia: Si el caché está vacío, visite algunos sitios web para poblarlo.
+
+El comando es: 
+```powershell
+Get-DnsClientCache | Where -Filter {$_.Type -eq 1 -or $_.Type -eq 28} | fl
+```
+Acá, Powershell trata el 1 como el tipo 'A', y el 28 como el tipo 'AAAA'.
+
+### 9. Genere una lista de todos los archivos .exe del directorio C:\Windows\System32 que tengan más de 5 MB.
+
+El comando a utilizar es 
+```powershell
+ls C:\Windows\System32 | where -filter { $_.Name -like '*.exe' -and $_.Length -gt 5*1MB} | fl Name,VersionInfo,@{n='Tamaño';e={$_.Length}}
+```
+
+Es muy similar al de los .exe de C:/Windows, solo que se le agrega la condición que el Length sea mayor a 5MB (Que se saca usando 5*1MB)
+
+### 10. Muestre una lista de parches que sean actualizaciones de seguridad.
+
+Se usa
+```powershell
+Muestre una lista de parches que sean actualizaciones de seguridad.
+```
+
+### 11. Muestre una lista de parches que hayan sido instalados por el usuario Administrador, que sean actualizaciones. Si no tiene ninguno, busque parches instalados por el usuario System. Note que algunos parches no tienen valor en el campo Installed By.
+
+Se usa
+```powershell
+Get-HotFix | Where -Filter {$_.Description -eq 'Update' -and $_.InstalledBy -eq 'NT AUTHORITY\SYSTEM'} | fl
+```
+Es como el anterior, solo que en vez de "Security Update" se pone solo "Update", y se le agrega la condición del InstalledBy
+
+
+### 12.Genere una lista de todos los procesos que estén corriendo con el nombre Conhost o Svchost.
+
+El comando es
+```powershell
+Get-Process | Where -Filter {$_.name -eq 'Conhost' -or $_.Name -eq 'Svchost'} | fl
+```
