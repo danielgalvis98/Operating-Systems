@@ -80,7 +80,7 @@ Es muy similar al de los .exe de C:/Windows, solo que se le agrega la condición
 
 Se usa
 ```powershell
-Muestre una lista de parches que sean actualizaciones de seguridad.
+Get-HotFix | Where -Filter {$_.Description -eq 'Security Update'} | fl
 ```
 
 ### 11. Muestre una lista de parches que hayan sido instalados por el usuario Administrador, que sean actualizaciones. Si no tiene ninguno, busque parches instalados por el usuario System. Note que algunos parches no tienen valor en el campo Installed By.
