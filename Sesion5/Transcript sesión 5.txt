@@ -1,0 +1,3635 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200319180821
+Username: DESKTOP-U258E43\danig
+RunAs User: DESKTOP-U258E43\danig
+Configuration Name: 
+Machine: DESKTOP-U258E43 (Microsoft Windows NT 10.0.18362.0)
+Host Application: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 324
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\danig\OneDrive\Documentos\PowerShell_transcript.DESKTOP-U258E43.1eqalbWX.20200319180821.txt
+PS C:\Users\danig> Get-WmiObject -Namespace root\CIMv2 -list | where name -like '*disk*'
+
+
+   NameSpace: ROOT\CIMv2
+
+Name                                Methods              Properties
+----                                -------              ----------
+CIM_DiskSpaceCheck                  {Invoke}             {AvailableDiskSpace, Caption, CheckID, CheckMode...}
+CIM_DiskDrive                       {SetPowerState, R... {Availability, Capabilities, CapabilityDescriptions, Caption...}
+Win32_DiskDrive                     {SetPowerState, R... {Availability, BytesPerSector, Capabilities, CapabilityDescriptions...}
+CIM_DisketteDrive                   {SetPowerState, R... {Availability, Capabilities, CapabilityDescriptions, Caption...}
+CIM_LogicalDisk                     {SetPowerState, R... {Access, Availability, BlockSize, Caption...}
+Win32_LogicalDisk                   {SetPowerState, R... {Access, Availability, BlockSize, Caption...}
+Win32_MappedLogicalDisk             {SetPowerState, R... {Access, Availability, BlockSize, Caption...}
+CIM_DiskPartition                   {SetPowerState, R... {Access, Availability, BlockSize, Bootable...}
+Win32_DiskPartition                 {SetPowerState, R... {Access, Availability, BlockSize, Bootable...}
+Win32_LogicalDiskRootDirectory      {}                   {GroupComponent, PartComponent}
+Win32_DiskQuota                     {}                   {DiskSpaceUsed, Limit, QuotaVolume, Status...}
+Win32_LogonSessionMappedDisk        {}                   {Antecedent, Dependent}
+CIM_LogicalDiskBasedOnPartition     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_LogicalDiskToPartition        {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_LogicalDiskBasedOnVolumeSet     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_DiskDrivePhysicalMedia        {}                   {Antecedent, Dependent}
+CIM_RealizesDiskPartition           {}                   {Antecedent, Dependent, StartingAddress}
+Win32_DiskDriveToDiskPartition      {}                   {Antecedent, Dependent}
+Win32_OfflineFilesDiskSpaceLimit    {}                   {AutoCacheSizeInMB, TotalSizeInMB}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, FileSystemBytesRead, FileSystemBytesWritten...}
+Win32_PerfRawData_Counters_FileS... {}                   {Caption, Description, FileSystemBytesRead, FileSystemBytesWritten...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Frequency_Object, Frequency_PerfTime...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Frequency_Object, Frequency_PerfTime...}
+Win32_PerfFormattedData_PerfDisk... {}                   {AvgDiskBytesPerRead, AvgDiskBytesPerTransfer, AvgDiskBytesPerWrite, AvgDiskQueueLength...}
+Win32_PerfRawData_PerfDisk_Logic... {}                   {AvgDiskBytesPerRead, AvgDiskBytesPerRead_Base, AvgDiskBytesPerTransfer, AvgDiskBytesPerTransfer_Base...}
+Win32_PerfFormattedData_PerfDisk... {}                   {AvgDiskBytesPerRead, AvgDiskBytesPerTransfer, AvgDiskBytesPerWrite, AvgDiskQueueLength...}
+Win32_PerfRawData_PerfDisk_Physi... {}                   {AvgDiskBytesPerRead, AvgDiskBytesPerRead_Base, AvgDiskBytesPerTransfer, AvgDiskBytesPerTransfer_Base...}
+
+
+PS C:\Users\danig> Get-WmiObject win32_desktop
+
+
+Name               : NT AUTHORITY\SYSTEM
+ScreenSaverActive  : False
+ScreenSaverSecure  :
+ScreenSaverTimeout :
+SettingID          :
+
+Name               : DESKTOP-U258E43\danig
+ScreenSaverActive  : False
+ScreenSaverSecure  :
+ScreenSaverTimeout :
+SettingID          :
+
+Name               : .DEFAULT
+ScreenSaverActive  : False
+ScreenSaverSecure  :
+ScreenSaverTimeout :
+SettingID          :
+
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*disk*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_LogicalDisk                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_LogicalDisk                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_MappedLogicalDisk             {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DiskPartition                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_DiskPartition                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DiskDrive                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_DiskDrive                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DisketteDrive                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_LogicalDiskBasedOnPartition     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_LogicalDiskToPartition        {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_LogicalDiskBasedOnVolumeSet     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_DiskDriveToDiskPartition      {}                   {Antecedent, Dependent}
+CIM_RealizesDiskPartition           {}                   {Antecedent, Dependent, StartingAddress}
+Win32_DiskDrivePhysicalMedia        {}                   {Antecedent, Dependent}
+Win32_LogonSessionMappedDisk        {}                   {Antecedent, Dependent}
+Win32_LogicalDiskRootDirectory      {}                   {GroupComponent, PartComponent}
+CIM_DiskSpaceCheck                  {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_DiskQuota                     {}                   {DiskSpaceUsed, Limit, QuotaVolume, Status...}
+Win32_OfflineFilesDiskSpaceLimit    {}                   {AutoCacheSizeInMB, TotalSizeInMB}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_FileS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfDisk... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfDisk_Logic... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfDisk... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfDisk_Physi... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-CimInstance -ClassName win32_logicaldisk
+
+DeviceID DriveType ProviderName VolumeName        Size         FreeSpace
+-------- --------- ------------ ----------        ----         ---------
+C:       3                      WINDOWS           155438518272 52798177280
+D:       3                      DATOS IMPORTANTES 790912561152 779750535168
+E:       5
+G:       5
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*ip*'
+
+
+   NameSpace: ROOT/CIMV2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+MSFT_NetTakeOwnership               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, RegistryKey}
+MSFT_WmiProviderEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName}
+Msft_WmiProvider_OperationEvent     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ComServerLoadOp... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_OperationEvent_... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutInstanceAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateInstanceE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteInstanceA... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CancelQuery_Post   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_NewQuery_Post      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ProvideEvents_Post {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecQueryAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_AccessCheck_Post   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateClassEnum... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteClassAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecMethodAsync... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_GetObjectAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutClassAsyncEv... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_InitializationO... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_InitializationO... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_LoadOperationFa... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ComServerLoadOp... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_UnLoadOperation... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_LoadOperationEvent {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_OperationEvent_Pre {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteInstanceA... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_AccessCheck_Pre    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecQueryAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteClassAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_NewQuery_Pre       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutInstanceAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateClassEnum... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecMethodAsync... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ProvideEvents_Pre  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CancelQuery_Pre    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutClassAsyncEv... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_GetObjectAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateInstanceE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Win32_IP4RouteTableEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+CIM_HeatPipe                        {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_HeatPipe                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_TCPIPPrinterPort              {}                   {Caption, Description, InstallDate, Name...}
+Win32_IP4RouteTable                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_IP4PersistedRouteTable        {}                   {Caption, Description, InstallDate, Name...}
+CIM_Chip                            {}                   {Caption, Description, InstallDate, Name...}
+ScriptingStandardConsumerSetting    {}                   {Caption, Description, SettingID, MaximumScripts...}
+__SecurityDescriptor                {}                   {ControlFlags, DACL, Group, Owner...}
+Win32_SecurityDescriptor            {}                   {ControlFlags, DACL, Group, Owner...}
+Win32_SecurityDescriptorHelper      {Win32SDToSDDL, W... {}
+CIM_ParticipatesInSet               {}                   {Element, Set}
+Msft_WmiProvider_Counters           {}                   {ProviderOperation_AccessCheck, ProviderOperation_CancelQuery, ProviderOperation_CreateClassEnumAsync, ProviderOperatio...
+Win32_PnPDevicePropertySecurityD... {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySecurityD... {}                   {DeviceID, key, KeyName, Type...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Gener... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Hyper... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Hyper... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPHTT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPHTT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Pacer... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_ICMP  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_ICMP        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IC... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_ICMPv6      {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IPv4  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_IPv4        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IPv6  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_IPv6        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_NB... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NBTConne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkI... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_TCPv4 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_TCPv4       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_TCPv6 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_TCPv6       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_UDPv4 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_UDPv4       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_UDPv6 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_UDPv6       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TCPIPCou... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TCPIPCounters_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TCPIPCou... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TCPIPCounters_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_VMBusPip... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_VMBusPipeIOPer... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*network*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_NetworkAdapter                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapter                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkConnection             {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkProtocol               {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkClient                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapterConfiguration   {EnableDHCP, Rene... {Caption, Description, SettingID, ArpAlwaysSourceRoute...}
+Win32_NetworkLoginProfile           {}                   {Caption, Description, SettingID, AccountExpires...}
+Win32_SystemNetworkConnections      {}                   {GroupComponent, PartComponent}
+Win32_NetworkAdapterSetting         {}                   {Element, Setting}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Netwo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_PerPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_PerPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Physi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Remot... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPPo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPQo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPQo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPQo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_VFPQo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Ethernet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_EthernetPerfPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETCLRNe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETCLRNetworki... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETCLRNe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETCLRNetworki... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicD... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicDropRea... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicStats_H... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicVRSSSta... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkI... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-WmiObject CIM_NetworkAdapter
+
+
+ServiceName      : kdnic
+MACAddress       :
+AdapterType      :
+DeviceID         : 0
+Name             : Microsoft Kernel Debug Network Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 1
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 2
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 3
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 00:15:5D:E2:82:CA
+AdapterType      : Ethernet 802.3
+DeviceID         : 4
+Name             : Hyper-V Virtual Ethernet Adapter
+NetworkAddresses :
+Speed            : 10000000000
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 00:15:5D:00:6A:0F
+AdapterType      : Ethernet 802.3
+DeviceID         : 5
+Name             : Hyper-V Virtual Ethernet Adapter #2
+NetworkAddresses :
+Speed            : 10000000000
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 6
+Name             : Hyper-V Virtual Ethernet Adapter #3
+NetworkAddresses :
+Speed            : 120000000
+
+ServiceName      : RTWlanE01
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 7
+Name             : Realtek RTL8723BE Wireless LAN 802.11n PCI-E NIC
+NetworkAddresses :
+Speed            :
+
+ServiceName      : rt640x64
+MACAddress       : C8:5B:76:27:3F:B3
+AdapterType      : Ethernet 802.3
+DeviceID         : 8
+Name             : Realtek PCIe GBE Family Controller
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : NdisImPlatformMp
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 9
+Name             : Microsoft Network Adapter Multiplexor Driver
+NetworkAddresses :
+Speed            :
+
+ServiceName      : vwifimp
+MACAddress       : 6A:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 10
+Name             : Microsoft Wi-Fi Direct Virtual Adapter
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : BthPan
+MACAddress       : 68:14:01:74:F2:76
+AdapterType      : Ethernet 802.3
+DeviceID         : 11
+Name             : Bluetooth Device (Personal Area Network)
+NetworkAddresses :
+Speed            : 3000000
+
+ServiceName      : vwifimp
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 12
+Name             : Microsoft Wi-Fi Direct Virtual Adapter #2
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : RasSstp
+MACAddress       :
+AdapterType      :
+DeviceID         : 13
+Name             : WAN Miniport (SSTP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : RasAgileVpn
+MACAddress       :
+AdapterType      :
+DeviceID         : 14
+Name             : WAN Miniport (IKEv2)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : Rasl2tp
+MACAddress       :
+AdapterType      :
+DeviceID         : 15
+Name             : WAN Miniport (L2TP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : PptpMiniport
+MACAddress       :
+AdapterType      :
+DeviceID         : 16
+Name             : WAN Miniport (PPTP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : RasPppoe
+MACAddress       :
+AdapterType      :
+DeviceID         : 17
+Name             : WAN Miniport (PPPOE)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : D2:B5:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 18
+Name             : WAN Miniport (IP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : D8:75:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 19
+Name             : WAN Miniport (IPv6)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : DA:D7:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 20
+Name             : WAN Miniport (Network Monitor)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VBoxNetAdp
+MACAddress       : 0A:00:27:00:00:3D
+AdapterType      : Ethernet 802.3
+DeviceID         : 21
+Name             : VirtualBox Host-Only Ethernet Adapter
+NetworkAddresses :
+Speed            : 1000000000
+
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*adapter*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_NetworkAdapter                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapter                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapterConfiguration   {EnableDHCP, Rene... {Caption, Description, SettingID, ArpAlwaysSourceRoute...}
+Win32_NetworkAdapterSetting         {}                   {Element, Setting}
+Win32_PerfFormattedData_Ethernet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_EthernetPerfPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicD... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicDropRea... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicStats_H... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicVRSSSta... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-WmiObject Win32_NetworkAdapter
+
+
+ServiceName      : kdnic
+MACAddress       :
+AdapterType      :
+DeviceID         : 0
+Name             : Microsoft Kernel Debug Network Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 1
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 2
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSMP
+MACAddress       :
+AdapterType      : Ethernet 802.3
+DeviceID         : 3
+Name             : Hyper-V Virtual Switch Extension Adapter
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 00:15:5D:E2:82:CA
+AdapterType      : Ethernet 802.3
+DeviceID         : 4
+Name             : Hyper-V Virtual Ethernet Adapter
+NetworkAddresses :
+Speed            : 10000000000
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 00:15:5D:00:6A:0F
+AdapterType      : Ethernet 802.3
+DeviceID         : 5
+Name             : Hyper-V Virtual Ethernet Adapter #2
+NetworkAddresses :
+Speed            : 10000000000
+
+ServiceName      : VMSNPXYMP
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 6
+Name             : Hyper-V Virtual Ethernet Adapter #3
+NetworkAddresses :
+Speed            : 120000000
+
+ServiceName      : RTWlanE01
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 7
+Name             : Realtek RTL8723BE Wireless LAN 802.11n PCI-E NIC
+NetworkAddresses :
+Speed            :
+
+ServiceName      : rt640x64
+MACAddress       : C8:5B:76:27:3F:B3
+AdapterType      : Ethernet 802.3
+DeviceID         : 8
+Name             : Realtek PCIe GBE Family Controller
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : NdisImPlatformMp
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 9
+Name             : Microsoft Network Adapter Multiplexor Driver
+NetworkAddresses :
+Speed            :
+
+ServiceName      : vwifimp
+MACAddress       : 6A:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 10
+Name             : Microsoft Wi-Fi Direct Virtual Adapter
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : BthPan
+MACAddress       : 68:14:01:74:F2:76
+AdapterType      : Ethernet 802.3
+DeviceID         : 11
+Name             : Bluetooth Device (Personal Area Network)
+NetworkAddresses :
+Speed            : 3000000
+
+ServiceName      : vwifimp
+MACAddress       : 68:14:01:74:F2:75
+AdapterType      : Ethernet 802.3
+DeviceID         : 12
+Name             : Microsoft Wi-Fi Direct Virtual Adapter #2
+NetworkAddresses :
+Speed            : 9223372036854775807
+
+ServiceName      : RasSstp
+MACAddress       :
+AdapterType      :
+DeviceID         : 13
+Name             : WAN Miniport (SSTP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : RasAgileVpn
+MACAddress       :
+AdapterType      :
+DeviceID         : 14
+Name             : WAN Miniport (IKEv2)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : Rasl2tp
+MACAddress       :
+AdapterType      :
+DeviceID         : 15
+Name             : WAN Miniport (L2TP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : PptpMiniport
+MACAddress       :
+AdapterType      :
+DeviceID         : 16
+Name             : WAN Miniport (PPTP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : RasPppoe
+MACAddress       :
+AdapterType      :
+DeviceID         : 17
+Name             : WAN Miniport (PPPOE)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : D2:B5:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 18
+Name             : WAN Miniport (IP)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : D8:75:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 19
+Name             : WAN Miniport (IPv6)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : NdisWan
+MACAddress       : DA:D7:20:52:41:53
+AdapterType      : Ethernet 802.3
+DeviceID         : 20
+Name             : WAN Miniport (Network Monitor)
+NetworkAddresses :
+Speed            :
+
+ServiceName      : VBoxNetAdp
+MACAddress       : 0A:00:27:00:00:3D
+AdapterType      : Ethernet 802.3
+DeviceID         : 21
+Name             : VirtualBox Host-Only Ethernet Adapter
+NetworkAddresses :
+Speed            : 1000000000
+
+
+
+PS C:\Users\danig> Get-WmiObject Win32_NetworkAdapterConfiguration
+
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : kdnic
+Description      : Microsoft Kernel Debug Network Adapter
+Index            : 0
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VMSMP
+Description      : Hyper-V Virtual Switch Extension Adapter
+Index            : 1
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VMSMP
+Description      : Hyper-V Virtual Switch Extension Adapter
+Index            : 2
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VMSMP
+Description      : Hyper-V Virtual Switch Extension Adapter
+Index            : 3
+
+DHCPEnabled      : False
+IPAddress        : {192.168.4.1, fe80::d499:6b18:285:b07b}
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VMSNPXYMP
+Description      : Hyper-V Virtual Ethernet Adapter
+Index            : 4
+
+DHCPEnabled      : False
+IPAddress        : {169.254.145.168, fe80::71b3:24d3:9275:91a8}
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VMSNPXYMP
+Description      : Hyper-V Virtual Ethernet Adapter #2
+Index            : 5
+
+DHCPEnabled      : True
+IPAddress        : {192.168.0.105, fe80::4c21:81ea:8eba:c227}
+DefaultIPGateway : {192.168.0.1}
+DNSDomain        :
+ServiceName      : VMSNPXYMP
+Description      : Hyper-V Virtual Ethernet Adapter #3
+Index            : 6
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : RTWlanE
+Description      : Realtek RTL8723BE Wireless LAN 802.11n PCI-E NIC
+Index            : 7
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : rt640x64
+Description      : Realtek PCIe GBE Family Controller
+Index            : 8
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : NdisImPlatformMp
+Description      : Microsoft Network Adapter Multiplexor Driver
+Index            : 9
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : vwifimp
+Description      : Microsoft Wi-Fi Direct Virtual Adapter
+Index            : 10
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : BthPan
+Description      : Bluetooth Device (Personal Area Network)
+Index            : 11
+
+DHCPEnabled      : True
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : vwifimp
+Description      : Microsoft Wi-Fi Direct Virtual Adapter
+Index            : 12
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : RasSstp
+Description      : WAN Miniport (SSTP)
+Index            : 13
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : RasAgileVpn
+Description      : WAN Miniport (IKEv2)
+Index            : 14
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : Rasl2tp
+Description      : WAN Miniport (L2TP)
+Index            : 15
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : PptpMiniport
+Description      : WAN Miniport (PPTP)
+Index            : 16
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : RasPppoe
+Description      : WAN Miniport (PPPOE)
+Index            : 17
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : NdisWan
+Description      : WAN Miniport (IP)
+Index            : 18
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : NdisWan
+Description      : WAN Miniport (IPv6)
+Index            : 19
+
+DHCPEnabled      : False
+IPAddress        :
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : NdisWan
+Description      : WAN Miniport (Network Monitor)
+Index            : 20
+
+DHCPEnabled      : False
+IPAddress        : {192.168.56.1, fe80::f11a:8db3:e27:e07b}
+DefaultIPGateway :
+DNSDomain        :
+ServiceName      : VBoxNetAdp
+Description      : VirtualBox Host-Only Ethernet Adapter
+Index            : 21
+
+
+
+PS C:\Users\danig> Get-WmiObject Win32_NetworkAdapterConfiguration | Get-Member
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapterConfiguration
+
+Name                         MemberType    Definition
+----                         ----------    ----------
+PSComputerName               AliasProperty PSComputerName = __SERVER
+DisableIPSec                 Method        System.Management.ManagementBaseObject DisableIPSec()
+EnableDHCP                   Method        System.Management.ManagementBaseObject EnableDHCP()
+EnableIPSec                  Method        System.Management.ManagementBaseObject EnableIPSec(System.String[] IPSecPermitTCPPorts, System.String[] IPSecPermitUDPPorts, System.S...
+EnableStatic                 Method        System.Management.ManagementBaseObject EnableStatic(System.String[] IPAddress, System.String[] SubnetMask)
+ReleaseDHCPLease             Method        System.Management.ManagementBaseObject ReleaseDHCPLease()
+RenewDHCPLease               Method        System.Management.ManagementBaseObject RenewDHCPLease()
+SetDNSDomain                 Method        System.Management.ManagementBaseObject SetDNSDomain(System.String DNSDomain)
+SetDNSServerSearchOrder      Method        System.Management.ManagementBaseObject SetDNSServerSearchOrder(System.String[] DNSServerSearchOrder)
+SetDynamicDNSRegistration    Method        System.Management.ManagementBaseObject SetDynamicDNSRegistration(System.Boolean FullDNSRegistrationEnabled, System.Boolean DomainDNSR...
+SetGateways                  Method        System.Management.ManagementBaseObject SetGateways(System.String[] DefaultIPGateway, System.UInt16[] GatewayCostMetric)
+SetIPConnectionMetric        Method        System.Management.ManagementBaseObject SetIPConnectionMetric(System.UInt32 IPConnectionMetric)
+SetIPXFrameTypeNetworkPairs  Method        System.Management.ManagementBaseObject SetIPXFrameTypeNetworkPairs(System.String[] IPXNetworkNumber, System.UInt32[] IPXFrameType)
+SetTcpipNetbios              Method        System.Management.ManagementBaseObject SetTcpipNetbios(System.UInt32 TcpipNetbiosOptions)
+SetWINSServer                Method        System.Management.ManagementBaseObject SetWINSServer(System.String WINSPrimaryServer, System.String WINSSecondaryServer)
+ArpAlwaysSourceRoute         Property      bool ArpAlwaysSourceRoute {get;set;}
+ArpUseEtherSNAP              Property      bool ArpUseEtherSNAP {get;set;}
+Caption                      Property      string Caption {get;set;}
+DatabasePath                 Property      string DatabasePath {get;set;}
+DeadGWDetectEnabled          Property      bool DeadGWDetectEnabled {get;set;}
+DefaultIPGateway             Property      string[] DefaultIPGateway {get;set;}
+DefaultTOS                   Property      byte DefaultTOS {get;set;}
+DefaultTTL                   Property      byte DefaultTTL {get;set;}
+Description                  Property      string Description {get;set;}
+DHCPEnabled                  Property      bool DHCPEnabled {get;set;}
+DHCPLeaseExpires             Property      string DHCPLeaseExpires {get;set;}
+DHCPLeaseObtained            Property      string DHCPLeaseObtained {get;set;}
+DHCPServer                   Property      string DHCPServer {get;set;}
+DNSDomain                    Property      string DNSDomain {get;set;}
+DNSDomainSuffixSearchOrder   Property      string[] DNSDomainSuffixSearchOrder {get;set;}
+DNSEnabledForWINSResolution  Property      bool DNSEnabledForWINSResolution {get;set;}
+DNSHostName                  Property      string DNSHostName {get;set;}
+DNSServerSearchOrder         Property      string[] DNSServerSearchOrder {get;set;}
+DomainDNSRegistrationEnabled Property      bool DomainDNSRegistrationEnabled {get;set;}
+ForwardBufferMemory          Property      uint32 ForwardBufferMemory {get;set;}
+FullDNSRegistrationEnabled   Property      bool FullDNSRegistrationEnabled {get;set;}
+GatewayCostMetric            Property      uint16[] GatewayCostMetric {get;set;}
+IGMPLevel                    Property      byte IGMPLevel {get;set;}
+Index                        Property      uint32 Index {get;set;}
+InterfaceIndex               Property      uint32 InterfaceIndex {get;set;}
+IPAddress                    Property      string[] IPAddress {get;set;}
+IPConnectionMetric           Property      uint32 IPConnectionMetric {get;set;}
+IPEnabled                    Property      bool IPEnabled {get;set;}
+IPFilterSecurityEnabled      Property      bool IPFilterSecurityEnabled {get;set;}
+IPPortSecurityEnabled        Property      bool IPPortSecurityEnabled {get;set;}
+IPSecPermitIPProtocols       Property      string[] IPSecPermitIPProtocols {get;set;}
+IPSecPermitTCPPorts          Property      string[] IPSecPermitTCPPorts {get;set;}
+IPSecPermitUDPPorts          Property      string[] IPSecPermitUDPPorts {get;set;}
+IPSubnet                     Property      string[] IPSubnet {get;set;}
+IPUseZeroBroadcast           Property      bool IPUseZeroBroadcast {get;set;}
+IPXAddress                   Property      string IPXAddress {get;set;}
+IPXEnabled                   Property      bool IPXEnabled {get;set;}
+IPXFrameType                 Property      uint32[] IPXFrameType {get;set;}
+IPXMediaType                 Property      uint32 IPXMediaType {get;set;}
+IPXNetworkNumber             Property      string[] IPXNetworkNumber {get;set;}
+IPXVirtualNetNumber          Property      string IPXVirtualNetNumber {get;set;}
+KeepAliveInterval            Property      uint32 KeepAliveInterval {get;set;}
+KeepAliveTime                Property      uint32 KeepAliveTime {get;set;}
+MACAddress                   Property      string MACAddress {get;set;}
+MTU                          Property      uint32 MTU {get;set;}
+NumForwardPackets            Property      uint32 NumForwardPackets {get;set;}
+PMTUBHDetectEnabled          Property      bool PMTUBHDetectEnabled {get;set;}
+PMTUDiscoveryEnabled         Property      bool PMTUDiscoveryEnabled {get;set;}
+ServiceName                  Property      string ServiceName {get;set;}
+SettingID                    Property      string SettingID {get;set;}
+TcpipNetbiosOptions          Property      uint32 TcpipNetbiosOptions {get;set;}
+TcpMaxConnectRetransmissions Property      uint32 TcpMaxConnectRetransmissions {get;set;}
+TcpMaxDataRetransmissions    Property      uint32 TcpMaxDataRetransmissions {get;set;}
+TcpNumConnections            Property      uint32 TcpNumConnections {get;set;}
+TcpUseRFC1122UrgentPointer   Property      bool TcpUseRFC1122UrgentPointer {get;set;}
+TcpWindowSize                Property      uint16 TcpWindowSize {get;set;}
+WINSEnableLMHostsLookup      Property      bool WINSEnableLMHostsLookup {get;set;}
+WINSHostLookupFile           Property      string WINSHostLookupFile {get;set;}
+WINSPrimaryServer            Property      string WINSPrimaryServer {get;set;}
+WINSScopeID                  Property      string WINSScopeID {get;set;}
+WINSSecondaryServer          Property      string WINSSecondaryServer {get;set;}
+__CLASS                      Property      string __CLASS {get;set;}
+__DERIVATION                 Property      string[] __DERIVATION {get;set;}
+__DYNASTY                    Property      string __DYNASTY {get;set;}
+__GENUS                      Property      int __GENUS {get;set;}
+__NAMESPACE                  Property      string __NAMESPACE {get;set;}
+__PATH                       Property      string __PATH {get;set;}
+__PROPERTY_COUNT             Property      int __PROPERTY_COUNT {get;set;}
+__RELPATH                    Property      string __RELPATH {get;set;}
+__SERVER                     Property      string __SERVER {get;set;}
+__SUPERCLASS                 Property      string __SUPERCLASS {get;set;}
+DHCP                         PropertySet   DHCP {Description, DHCPEnabled, DHCPLeaseExpires, DHCPLeaseObtained, DHCPServer, Index}
+DNS                          PropertySet   DNS {Description, DNSDomain, DNSDomainSuffixSearchOrder, DNSEnabledForWINSResolution, DNSHostName, DNSServerSearchOrder, DomainDNSReg...
+IP                           PropertySet   IP {Description, Index, IPAddress, IPConnectionMetric, IPEnabled, IPFilterSecurityEnabled}
+PSStatus                     PropertySet   PSStatus {DHCPLeaseExpires, Index, Description}
+WINS                         PropertySet   WINS {Description, Index, WINSEnableLMHostsLookup, WINSHostLookupFile, WINSPrimaryServer, WINSScopeID, WINSSecondaryServer}
+ConvertFromDateTime          ScriptMethod  System.Object ConvertFromDateTime();
+ConvertToDateTime            ScriptMethod  System.Object ConvertToDateTime();
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*quick-fix'
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*quick-fix*'
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*adapter*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_NetworkAdapter                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapter                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapterConfiguration   {EnableDHCP, Rene... {Caption, Description, SettingID, ArpAlwaysSourceRoute...}
+Win32_NetworkAdapterSetting         {}                   {Element, Setting}
+Win32_PerfFormattedData_Ethernet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_EthernetPerfPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicD... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicDropRea... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicStats_H... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NvspNicV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NvspNicVRSSSta... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*quickfix*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+Win32_QuickFixEngineering           {}                   {Caption, Description, InstallDate, Name...}
+
+
+PS C:\Users\danig> Get-WmiObject Win32_QuickFixEngineering | Get-Member
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_QuickFixEngineering
+
+Name                MemberType     Definition
+----                ----------     ----------
+PSComputerName      AliasProperty  PSComputerName = __SERVER
+Caption             Property       string Caption {get;set;}
+CSName              Property       string CSName {get;set;}
+Description         Property       string Description {get;set;}
+FixComments         Property       string FixComments {get;set;}
+HotFixID            Property       string HotFixID {get;set;}
+InstallDate         Property       string InstallDate {get;set;}
+InstalledBy         Property       string InstalledBy {get;set;}
+Name                Property       string Name {get;set;}
+ServicePackInEffect Property       string ServicePackInEffect {get;set;}
+Status              Property       string Status {get;set;}
+__CLASS             Property       string __CLASS {get;set;}
+__DERIVATION        Property       string[] __DERIVATION {get;set;}
+__DYNASTY           Property       string __DYNASTY {get;set;}
+__GENUS             Property       int __GENUS {get;set;}
+__NAMESPACE         Property       string __NAMESPACE {get;set;}
+__PATH              Property       string __PATH {get;set;}
+__PROPERTY_COUNT    Property       int __PROPERTY_COUNT {get;set;}
+__RELPATH           Property       string __RELPATH {get;set;}
+__SERVER            Property       string __SERVER {get;set;}
+__SUPERCLASS        Property       string __SUPERCLASS {get;set;}
+PSStatus            PropertySet    PSStatus {__PATH, Status}
+ConvertFromDateTime ScriptMethod   System.Object ConvertFromDateTime();
+ConvertToDateTime   ScriptMethod   System.Object ConvertToDateTime();
+InstalledOn         ScriptProperty System.Object InstalledOn {get=if ([environment]::osversion.version.build -ge 7000)...
+
+
+PS C:\Users\danig> Get-WmiObject Win32_QuickFixEngineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-U2... Update           KB4534132     NT AUTHORITY\SYSTEM  2/8/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4515383     NT AUTHORITY\SYSTEM  10/19/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4516115     NT AUTHORITY\SYSTEM  10/26/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4521863     NT AUTHORITY\SYSTEM  10/24/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4524569     NT AUTHORITY\SYSTEM  11/14/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4528759     NT AUTHORITY\SYSTEM  1/17/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4537759     NT AUTHORITY\SYSTEM  2/15/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4538674     NT AUTHORITY\SYSTEM  2/15/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4541338     NT AUTHORITY\SYSTEM  3/13/2020 12:00:00 AM
+DESKTOP-U2... Update           KB4551762     NT AUTHORITY\SYSTEM  3/14/2020 12:00:00 AM
+
+
+PS C:\Users\danig> Get-Hotfix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-U2... Update           KB4534132     NT AUTHORITY\SYSTEM  2/8/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4515383     NT AUTHORITY\SYSTEM  10/19/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4516115     NT AUTHORITY\SYSTEM  10/26/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4521863     NT AUTHORITY\SYSTEM  10/24/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4524569     NT AUTHORITY\SYSTEM  11/14/2019 12:00:00 AM
+DESKTOP-U2... Security Update  KB4528759     NT AUTHORITY\SYSTEM  1/17/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4537759     NT AUTHORITY\SYSTEM  2/15/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4538674     NT AUTHORITY\SYSTEM  2/15/2020 12:00:00 AM
+DESKTOP-U2... Security Update  KB4541338     NT AUTHORITY\SYSTEM  3/13/2020 12:00:00 AM
+DESKTOP-U2... Update           KB4551762     NT AUTHORITY\SYSTEM  3/14/2020 12:00:00 AM
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*services*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+MSFT_NetServiceShutdownFailed       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStartHung            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStopControlSuccess   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Comment, Control...}
+MSFT_NetServiceSlowStartup          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, StartupTime}
+MSFT_NetBadServiceState             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, State}
+MSFT_NetServiceStartTypeChanged     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NewStartType, OldStartType...}
+MSFT_NetServiceStartFailedGroup     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Group, Service}
+MSFT_NetServiceStartFailedII        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, DependedOnService, Error...}
+MSFT_NetServiceStatusSuccess        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Control, Service}
+MSFT_NetServiceStartFailed          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceStartFailedNone      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NonExistingService, Service}
+CIM_ServiceServiceDependency        {}                   {Antecedent, Dependent, TypeOfDependency}
+CIM_ServiceSAPDependency            {}                   {Antecedent, Dependent}
+Win32_SystemServices                {}                   {GroupComponent, PartComponent}
+Win32_ServiceSpecification          {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ServiceSpecificationService   {}                   {Check, Element}
+Win32_PerfFormattedData_LocalSes... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_LocalSessionMa... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TermServ... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TermService_Te... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 | where cimclassname -Like '*service*'
+
+
+   NameSpace: ROOT/CIMv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+MSFT_NetSevereServiceFailed         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceNotInteractive       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceConfigBackoutFailed  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ConfigField, Service}
+MSFT_NetServiceShutdownFailed       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStartHung            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStopControlSuccess   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Comment, Control...}
+MSFT_NetServiceSlowStartup          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, StartupTime}
+MSFT_NetBadServiceState             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, State}
+MSFT_NetServiceStartTypeChanged     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NewStartType, OldStartType...}
+MSFT_NetServiceLogonTypeNotGranted  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Account, Error...}
+MSFT_NetServiceStartFailedGroup     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Group, Service}
+MSFT_NetDependOnLaterService        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceDifferentPIDConne... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ActualPID, ExpectedPID...}
+MSFT_NetServiceCrashNoAction        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, TimesFailed}
+MSFT_NetServiceExitFailed           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceStartFailedII        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, DependedOnService, Error...}
+MSFT_NetServiceExitFailedSpecific   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceCrash                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Action, ActionDelay...}
+MSFT_NetServiceRecoveryFailed       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Action, ActionType...}
+MSFT_NetServiceStatusSuccess        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Control, Service}
+MSFT_NetServiceControlSuccess       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Control, Service...}
+MSFT_NetServiceStartFailed          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceStartFailedNone      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NonExistingService, Service}
+CIM_Service                         {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_BaseService                   {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_Service                       {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_TerminalService               {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_BootService                     {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_ClusteringService               {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_ApplicationService            {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_ServiceAccessPoint              {}                   {Caption, Description, InstallDate, Name...}
+SoftwareLicensingService            {InstallProductKe... {ClientMachineID, DiscoveredKeyManagementServiceMachineIpAddress, DiscoveredKeyManagementServiceMachineName, Discovered...
+Win32_ServiceControl                {}                   {Caption, Description, SettingID, Arguments...}
+CIM_DeviceServiceImplementation     {}                   {Antecedent, Dependent}
+CIM_ServiceAccessBySAP              {}                   {Antecedent, Dependent}
+CIM_BootServiceAccessBySAP          {}                   {Antecedent, Dependent}
+CIM_ClusterServiceAccessBySAP       {}                   {Antecedent, Dependent}
+Win32_LoadOrderGroupServiceDepen... {}                   {Antecedent, Dependent}
+CIM_HostedService                   {}                   {Antecedent, Dependent}
+CIM_HostedBootService               {}                   {Antecedent, Dependent}
+CIM_ServiceServiceDependency        {}                   {Antecedent, Dependent, TypeOfDependency}
+Win32_DependentService              {}                   {Antecedent, Dependent, TypeOfDependency}
+CIM_SoftwareFeatureServiceImplem... {}                   {Antecedent, Dependent}
+CIM_ServiceSAPDependency            {}                   {Antecedent, Dependent}
+Win32_SystemServices                {}                   {GroupComponent, PartComponent}
+Win32_LoadOrderGroupServiceMembers  {}                   {GroupComponent, PartComponent}
+Win32_ServiceSpecification          {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ServiceSpecificationService   {}                   {Check, Element}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Hyper... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_FaxServi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_FaxService_Fax... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_LocalSes... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_LocalSessionMa... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelEn... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelOp... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelSe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TermServ... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TermService_Te... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Workflow... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WorkflowServic... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Users\danig> Get-WmiObject Win32_Service
+
+
+ExitCode  : 0
+Name      : AdobeFlashPlayerUpdateSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AJRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ALG
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AMD External Events Utility
+ProcessId : 2076
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppIDSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Appinfo
+ProcessId : 6500
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppMgmt
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppReadiness
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppVClient
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AppXSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AssignedAccessManagerSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AudioEndpointBuilder
+ProcessId : 2624
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Audiosrv
+ProcessId : 2916
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : autotimesvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AxInstSV
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : BDESVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BFE
+ProcessId : 3804
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BITS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BrokerInfrastructure
+ProcessId : 824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BTAGService
+ProcessId : 1384
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BthAvctpSvc
+ProcessId : 1404
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : bthserv
+ProcessId : 1400
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : camsvc
+ProcessId : 2876
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CDPSvc
+ProcessId : 6640
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : CertPropSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ClickToRunSvc
+ProcessId : 6324
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ClipSVC
+ProcessId : 1476
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : com.docker.service
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : COMSysApp
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : CoreMessagingRegistrar
+ProcessId : 2204
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CryptSvc
+ProcessId : 3264
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : CscService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : CxAudMsg
+ProcessId : 1564
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DcomLaunch
+ProcessId : 824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : defragsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DeviceAssociationService
+ProcessId : 2248
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DeviceInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevQueryBroker
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dhcp
+ProcessId : 2012
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagnosticshub.standardcollector.service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DiagTrack
+ProcessId : 596
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DispBrokerDesktopSvc
+ProcessId : 2368
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DisplayEnhancementService
+ProcessId : 1460
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DmEnrollmentSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : dmwappushservice
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dnscache
+ProcessId : 2068
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DoSvc
+ProcessId : 9624
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : dot3svc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DPS
+ProcessId : 3824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DsmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DsSvc
+ProcessId : 6304
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DusmSvc
+ProcessId : 3344
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Eaphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EFS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : embeddedmode
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EntAppSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : EventLog
+ProcessId : 1756
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventSystem
+ProcessId : 2400
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Fax
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : fdPHost
+ProcessId : 6036
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FDResPub
+ProcessId : 6116
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : fhsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache
+ProcessId : 2632
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : FontCache3.0.0.0
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FrameServer
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GoogleChromeElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gpsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GraphicsPerfSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gupdate
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : gupdatem
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : HgClientService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : hidserv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : hns
+ProcessId : 6700
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : HvHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : icssvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : IKEEXT
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : InstallService
+ProcessId : 5756
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : iphlpsvc
+ProcessId : 4648
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : IpxlatCfgSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : KeyIso
+ProcessId : 1004
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : KtmRm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanServer
+ProcessId : 5096
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanWorkstation
+ProcessId : 3852
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : lfsvc
+ProcessId : 1848
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LicenseManager
+ProcessId : 8616
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : lltdsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : lmhosts
+ProcessId : 12704
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LSM
+ProcessId : 1148
+StartMode : Unknown
+State     : Running
+Status    : UNKNOWN
+
+ExitCode  : 0
+Name      : LxpSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : MapsBroker
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : mpssvc
+ProcessId : 3804
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSDTC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSiSCSI
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : msiserver
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NaturalAuthentication
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcaSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NcbService
+ProcessId : 1312
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NcdAutoSetup
+ProcessId : 1368
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netlogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Netman
+ProcessId : 13280
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : netprofm
+ProcessId : 2512
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NetSetupSvc
+ProcessId : 0
+StartMode : Unknown
+State     : Stopped
+Status    : UNKNOWN
+
+ExitCode  : 1077
+Name      : NetTcpPortSharing
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcCtnrSvc
+ProcessId : 6964
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcSvc
+ProcessId : 9928
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NlaSvc
+ProcessId : 1144
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nsi
+ProcessId : 1968
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nvagent
+ProcessId : 8416
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ose64
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2pimsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2psvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PcaSvc
+ProcessId : 8868
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PeerDistSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : perceptionsimulation
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PerfHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PhoneSvc
+ProcessId : 2256
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : pla
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PlugPlay
+ProcessId : 656
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPAutoReg
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PolicyAgent
+ProcessId : 5136
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : postgresql-x64-12
+ProcessId : 4100
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Power
+ProcessId : 824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PrintNotify
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ProfSvc
+ProcessId : 1724
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : PST Service
+ProcessId : 4156
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : PushToInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : QWAVE
+ProcessId : 5164
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RasAuto
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RasMan
+ProcessId : 4328
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteAccess
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteRegistry
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RetailDemo
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RmSvc
+ProcessId : 5048
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcEptMapper
+ProcessId : 1096
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RpcLocator
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcSs
+ProcessId : 1096
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : RtkBtManServ
+ProcessId : 4192
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SamSs
+ProcessId : 1004
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SAService
+ProcessId : 4180
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCardSvr
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ScDeviceEnum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Schedule
+ProcessId : 1892
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCPolicySvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SDRSVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : seclogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SecurityHealthService
+ProcessId : 5880
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SEMgrSvc
+ProcessId : 3052
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SENS
+ProcessId : 2580
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Sense
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorDataService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SessionEnv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SgrmBroker
+ProcessId : 10108
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SharedAccess
+ProcessId : 8976
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SharedRealitySvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ShellHWDetection
+ProcessId : 3676
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : shpamsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : smphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SmsRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SNMPTRAP
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : spectrum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Spooler
+ProcessId : 3768
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : sppsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SSDPSRV
+ProcessId : 5504
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ssh-agent
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SstpSvc
+ProcessId : 4172
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StateRepository
+ProcessId : 3016
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : stisvc
+ProcessId : 4216
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StorSvc
+ProcessId : 9764
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : svsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : swprv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SynTPEnhService
+ProcessId : 4244
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SysMain
+ProcessId : 2388
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SystemEventsBroker
+ProcessId : 824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TabletInputService
+ProcessId : 6132
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : TapiSrv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : TeamViewer
+ProcessId : 4264
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : TermService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Themes
+ProcessId : 2380
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : TieringEngineService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : TimeBrokerSvc
+ProcessId : 1540
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TokenBroker
+ProcessId : 2220
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TrkWks
+ProcessId : 4240
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TroubleshootingSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : TrustedInstaller
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : tzautoupdate
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : UevAgentService
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : UIUService
+ProcessId : 4272
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : UmRdpService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : upnphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : UserManager
+ProcessId : 2084
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : UsoSvc
+ProcessId : 10164
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : VacSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : VaultSvc
+ProcessId : 1004
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : vds
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : vmcompute
+ProcessId : 8964
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicguestinterface
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicheartbeat
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmickvpexchange
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicrdv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicshutdown
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmictimesync
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicvmsession
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : vmicvss
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : vmms
+ProcessId : 4652
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : VSS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : W32Time
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WaaSMedicSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WalletService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WarpJITSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : wbengine
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WbioSrvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Wcmsvc
+ProcessId : 3332
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : wcncsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WdiServiceHost
+ProcessId : 4472
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : WdiSystemHost
+ProcessId : 4868
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : WdNisSvc
+ProcessId : 13256
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : WebClient
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Wecsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WEPHOSTSVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : wercplsupport
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WerSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WFDSConMgrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WiaRpc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WinDefend
+ProcessId : 8696
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : WinHttpAutoProxySvc
+ProcessId : 3172
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Winmgmt
+ProcessId : 4084
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : WinRM
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : wisvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WlanSvc
+ProcessId : 3616
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : wlidsvc
+ProcessId : 4776
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : wlpasvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WManSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : wmiApSrv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WMPNetworkSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : workfolderssvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : WpcMonSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WPDBusEnum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : WpnService
+ProcessId : 4316
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : wscsvc
+ProcessId : 8740
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : WSearch
+ProcessId : 7232
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : wuauserv
+ProcessId : 3592
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : WwanSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : XblAuthManager
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : XblGameSave
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : XboxGipSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : XboxNetApiSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : VBoxSDS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : McComponentHostService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AarSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : BcastDVRUserService_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BluetoothUserService_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : CaptureService_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : cbdhsvc_763b739
+ProcessId : 11424
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CDPUserSvc_763b739
+ProcessId : 7780
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ConsentUxUserSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : CredentialEnrollmentManagerUserSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DeviceAssociationBrokerSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevicePickerUserSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevicesFlowUserSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : MessagingService_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : OneSyncSvc_763b739
+ProcessId : 11864
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : PimIndexMaintenanceSvc_763b739
+ProcessId : 11864
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PrintWorkflowUserSvc_763b739
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : UnistoreSvc_763b739
+ProcessId : 11864
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : UserDataSvc_763b739
+ProcessId : 11864
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : WpnUserService_763b739
+ProcessId : 7444
+StartMode : Auto
+State     : Running
+Status    : OK
+
+
+
+PS C:\Users\danig> Get-WmiObject Win32_Service | Get-Member
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_Service
+
+Name                    MemberType    Definition
+----                    ----------    ----------
+PSComputerName          AliasProperty PSComputerName = __SERVER
+Change                  Method        System.Management.ManagementBaseObject Change(System.String DisplayName, System.String PathName, System.Byte ServiceType, System.Byte Erro...
+ChangeStartMode         Method        System.Management.ManagementBaseObject ChangeStartMode(System.String StartMode)
+Delete                  Method        System.Management.ManagementBaseObject Delete()
+GetSecurityDescriptor   Method        System.Management.ManagementBaseObject GetSecurityDescriptor()
+InterrogateService      Method        System.Management.ManagementBaseObject InterrogateService()
+PauseService            Method        System.Management.ManagementBaseObject PauseService()
+ResumeService           Method        System.Management.ManagementBaseObject ResumeService()
+SetSecurityDescriptor   Method        System.Management.ManagementBaseObject SetSecurityDescriptor(System.Management.ManagementObject#Win32_SecurityDescriptor Descriptor)
+StartService            Method        System.Management.ManagementBaseObject StartService()
+StopService             Method        System.Management.ManagementBaseObject StopService()
+UserControlService      Method        System.Management.ManagementBaseObject UserControlService(System.Byte ControlCode)
+AcceptPause             Property      bool AcceptPause {get;set;}
+AcceptStop              Property      bool AcceptStop {get;set;}
+Caption                 Property      string Caption {get;set;}
+CheckPoint              Property      uint32 CheckPoint {get;set;}
+CreationClassName       Property      string CreationClassName {get;set;}
+DelayedAutoStart        Property      bool DelayedAutoStart {get;set;}
+Description             Property      string Description {get;set;}
+DesktopInteract         Property      bool DesktopInteract {get;set;}
+DisplayName             Property      string DisplayName {get;set;}
+ErrorControl            Property      string ErrorControl {get;set;}
+ExitCode                Property      uint32 ExitCode {get;set;}
+InstallDate             Property      string InstallDate {get;set;}
+Name                    Property      string Name {get;set;}
+PathName                Property      string PathName {get;set;}
+ProcessId               Property      uint32 ProcessId {get;set;}
+ServiceSpecificExitCode Property      uint32 ServiceSpecificExitCode {get;set;}
+ServiceType             Property      string ServiceType {get;set;}
+Started                 Property      bool Started {get;set;}
+StartMode               Property      string StartMode {get;set;}
+StartName               Property      string StartName {get;set;}
+State                   Property      string State {get;set;}
+Status                  Property      string Status {get;set;}
+SystemCreationClassName Property      string SystemCreationClassName {get;set;}
+SystemName              Property      string SystemName {get;set;}
+TagId                   Property      uint32 TagId {get;set;}
+WaitHint                Property      uint32 WaitHint {get;set;}
+__CLASS                 Property      string __CLASS {get;set;}
+__DERIVATION            Property      string[] __DERIVATION {get;set;}
+__DYNASTY               Property      string __DYNASTY {get;set;}
+__GENUS                 Property      int __GENUS {get;set;}
+__NAMESPACE             Property      string __NAMESPACE {get;set;}
+__PATH                  Property      string __PATH {get;set;}
+__PROPERTY_COUNT        Property      int __PROPERTY_COUNT {get;set;}
+__RELPATH               Property      string __RELPATH {get;set;}
+__SERVER                Property      string __SERVER {get;set;}
+__SUPERCLASS            Property      string __SUPERCLASS {get;set;}
+PSConfiguration         PropertySet   PSConfiguration {DesktopInteract, ErrorControl, Name, PathName, ServiceType, StartMode}
+PSStatus                PropertySet   PSStatus {Name, Status, ExitCode}
+ConvertFromDateTime     ScriptMethod  System.Object ConvertFromDateTime();
+ConvertToDateTime       ScriptMethod  System.Object ConvertToDateTime();
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_TerminalService
+
+Name                    MemberType    Definition
+----                    ----------    ----------
+PSComputerName          AliasProperty PSComputerName = __SERVER
+Change                  Method        System.Management.ManagementBaseObject Change(System.String DisplayName, System.String PathName, System.Byte ServiceType, System.Byte Erro...
+ChangeStartMode         Method        System.Management.ManagementBaseObject ChangeStartMode(System.String StartMode)
+Delete                  Method        System.Management.ManagementBaseObject Delete()
+GetSecurityDescriptor   Method        System.Management.ManagementBaseObject GetSecurityDescriptor()
+InterrogateService      Method        System.Management.ManagementBaseObject InterrogateService()
+PauseService            Method        System.Management.ManagementBaseObject PauseService()
+ResumeService           Method        System.Management.ManagementBaseObject ResumeService()
+SetSecurityDescriptor   Method        System.Management.ManagementBaseObject SetSecurityDescriptor(System.Management.ManagementObject#Win32_SecurityDescriptor Descriptor)
+StartService            Method        System.Management.ManagementBaseObject StartService()
+StopService             Method        System.Management.ManagementBaseObject StopService()
+UserControlService      Method        System.Management.ManagementBaseObject UserControlService(System.Byte ControlCode)
+AcceptPause             Property      bool AcceptPause {get;set;}
+AcceptStop              Property      bool AcceptStop {get;set;}
+Caption                 Property      string Caption {get;set;}
+CheckPoint              Property      uint32 CheckPoint {get;set;}
+CreationClassName       Property      string CreationClassName {get;set;}
+DelayedAutoStart        Property      bool DelayedAutoStart {get;set;}
+Description             Property      string Description {get;set;}
+DesktopInteract         Property      bool DesktopInteract {get;set;}
+DisconnectedSessions    Property      uint32 DisconnectedSessions {get;set;}
+DisplayName             Property      string DisplayName {get;set;}
+ErrorControl            Property      string ErrorControl {get;set;}
+ExitCode                Property      uint32 ExitCode {get;set;}
+InstallDate             Property      string InstallDate {get;set;}
+Name                    Property      string Name {get;set;}
+PathName                Property      string PathName {get;set;}
+ProcessId               Property      uint32 ProcessId {get;set;}
+ServiceSpecificExitCode Property      uint32 ServiceSpecificExitCode {get;set;}
+ServiceType             Property      string ServiceType {get;set;}
+Started                 Property      bool Started {get;set;}
+StartMode               Property      string StartMode {get;set;}
+StartName               Property      string StartName {get;set;}
+State                   Property      string State {get;set;}
+Status                  Property      string Status {get;set;}
+SystemCreationClassName Property      string SystemCreationClassName {get;set;}
+SystemName              Property      string SystemName {get;set;}
+TagId                   Property      uint32 TagId {get;set;}
+TotalSessions           Property      uint32 TotalSessions {get;set;}
+WaitHint                Property      uint32 WaitHint {get;set;}
+__CLASS                 Property      string __CLASS {get;set;}
+__DERIVATION            Property      string[] __DERIVATION {get;set;}
+__DYNASTY               Property      string __DYNASTY {get;set;}
+__GENUS                 Property      int __GENUS {get;set;}
+__NAMESPACE             Property      string __NAMESPACE {get;set;}
+__PATH                  Property      string __PATH {get;set;}
+__PROPERTY_COUNT        Property      int __PROPERTY_COUNT {get;set;}
+__RELPATH               Property      string __RELPATH {get;set;}
+__SERVER                Property      string __SERVER {get;set;}
+__SUPERCLASS            Property      string __SUPERCLASS {get;set;}
+PSConfiguration         PropertySet   PSConfiguration {DesktopInteract, ErrorControl, Name, PathName, ServiceType, StartMode}
+PSStatus                PropertySet   PSStatus {Name, Status, ExitCode}
+ConvertFromDateTime     ScriptMethod  System.Object ConvertFromDateTime();
+ConvertToDateTime       ScriptMethod  System.Object ConvertToDateTime();
+
+
+PS C:\Users\danig> Get-WmiObject Win32_Service | Select-Object status, startmode, systemname
+
+status  startmode systemname
+------  --------- ----------
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+UNKNOWN Unknown   DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+UNKNOWN Unknown   DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Disabled  DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Manual    DESKTOP-U258E43
+OK      Auto      DESKTOP-U258E43
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\SecurityCenter2 | where cimclassname -Like '*product*'
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\CIMv2 -ClassName AntiSpywareProduct
+Get-CimClass : Not found 
+At line:1 char:1
++ Get-CimClass -Namespace root\CIMv2 -ClassName AntiSpywareProduct
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (root\CIMv2:AntiSpywareProduct:String) [Get-CimClass], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041002,Microsoft.Management.Infrastructure.CimCmdlets.GetCimClassCommand
+Get-CimClass : Not found
+At line:1 char:1
++ Get-CimClass -Namespace root\CIMv2 -ClassName AntiSpywareProduct
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (root\CIMv2:AntiSpywareProduct:String) [Get-CimClass], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041002,Microsoft.Management.Infrastructure.CimCmdlets.GetCimClassCommand
+
+PS C:\Users\danig> Get-CimClass AntiSpywareProduct
+Get-CimClass : Not found 
+At line:1 char:1
++ Get-CimClass AntiSpywareProduct
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (root\cimv2:AntiSpywareProduct:String) [Get-CimClass], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041002,Microsoft.Management.Infrastructure.CimCmdlets.GetCimClassCommand
+Get-CimClass : Not found
+At line:1 char:1
++ Get-CimClass AntiSpywareProduct
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (root\cimv2:AntiSpywareProduct:String) [Get-CimClass], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041002,Microsoft.Management.Infrastructure.CimCmdlets.GetCimClassCommand
+
+PS C:\Users\danig> Get-CimClass -Namespace root\SecurityCenter2 -ClassName AntiSpywareProduct
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Users\danig> Get-CimClass -Namespace root\SecurityCenter2 -ClassName AntiSpywareProduct | Get-Member
+
+
+   TypeName: Microsoft.Management.Infrastructure.CimClass
+
+Name                MemberType     Definition
+----                ----------     ----------
+Dispose             Method         void Dispose(), void IDisposable.Dispose()
+Equals              Method         bool Equals(System.Object obj)
+GetHashCode         Method         int GetHashCode()
+GetType             Method         type GetType()
+ToString            Method         string ToString()
+CimClassMethods     Property       Microsoft.Management.Infrastructure.Generic.CimReadOnlyKeyedCollection[Microsoft.Management.Infrastructure.CimMethodDeclaration] CimClassMeth...
+CimClassProperties  Property       Microsoft.Management.Infrastructure.Generic.CimReadOnlyKeyedCollection[Microsoft.Management.Infrastructure.CimPropertyDeclaration] CimClassPr...
+CimClassQualifiers  Property       Microsoft.Management.Infrastructure.Generic.CimReadOnlyKeyedCollection[Microsoft.Management.Infrastructure.CimQualifier] CimClassQualifiers {...
+CimSuperClass       Property       cimclass CimSuperClass {get;}
+CimSuperClassName   Property       string CimSuperClassName {get;}
+CimSystemProperties Property       Microsoft.Management.Infrastructure.CimSystemProperties CimSystemProperties {get;}
+CimClassName        ScriptProperty System.String CimClassName {get=[OutputType([string])]...
+
+
+PS C:\Users\danig> Get-CimInstance -Namespace root\SecurityCenter2 -ClassName AntiSpywareProduct
+
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 397568
+timestamp                : Sat, 19 Oct 2019 23:49:36 GMT
+PSComputerName           :
+
+
+
+PS C:\Users\danig> Get-CimInstance -Namespace root\SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+PS C:\Users\danig> Get-CimInstance -Namespace root\SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+PS C:\Users\danig> end-transcript
+end-transcript : The term 'end-transcript' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ end-transcript
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (end-transcript:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+end-transcript : The term 'end-transcript' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:1
++ end-transcript
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (end-transcript:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\danig> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200319185328
+**********************
